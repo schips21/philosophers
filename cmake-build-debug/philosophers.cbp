@@ -84,13 +84,16 @@
 		<Unit filename="/Users/schips/Desktop/philosophers/ft_itoa.c">
 			<Option target="philosophers"/>
 		</Unit>
-		<Unit filename="/Users/schips/Desktop/philosophers/ft_putstr_fd.c">
-			<Option target="philosophers"/>
-		</Unit>
 		<Unit filename="/Users/schips/Desktop/philosophers/main.c">
 			<Option target="philosophers"/>
 		</Unit>
 		<Unit filename="/Users/schips/Desktop/philosophers/philo_init.c">
+			<Option target="philosophers"/>
+		</Unit>
+		<Unit filename="/Users/schips/Desktop/philosophers/philo_print.c">
+			<Option target="philosophers"/>
+		</Unit>
+		<Unit filename="/Users/schips/Desktop/philosophers/philo_time.c">
 			<Option target="philosophers"/>
 		</Unit>
 		<Unit filename="/Users/schips/Desktop/philosophers/philosophers_header.h">

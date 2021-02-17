@@ -4,9 +4,11 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <stdlib.h>
+#include <sys/time.h>
 
 #include <stdio.h>
 
+long start_time;
 
 typedef	struct				s_info
 {
@@ -42,6 +44,7 @@ int		philo_error(char *str);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 int		init_all(t_all *all, int argc, char **argv);
 int		init_philo(t_all *all);
 int		init_forks(t_all *all);
@@ -49,6 +52,10 @@ int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
 char	*ft_itoa(int n);
 size_t	ft_strlen(const char *s);
+
+long	get_time_in_millisec();
+void	philo_accurate_usleep(long time_to);
+void	philo_print(char *str, t_philo *philo);
 
 
 #endif

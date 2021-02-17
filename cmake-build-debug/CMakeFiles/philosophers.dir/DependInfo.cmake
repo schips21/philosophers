@@ -6,9 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/schips/Desktop/philosophers/ft_atoi.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/ft_atoi.c.o"
   "/Users/schips/Desktop/philosophers/ft_itoa.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/ft_itoa.c.o"
-  "/Users/schips/Desktop/philosophers/ft_putstr_fd.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/ft_putstr_fd.c.o"
   "/Users/schips/Desktop/philosophers/main.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/main.c.o"
   "/Users/schips/Desktop/philosophers/philo_init.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/philo_init.c.o"
+  "/Users/schips/Desktop/philosophers/philo_print.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/philo_print.c.o"
+  "/Users/schips/Desktop/philosophers/philo_time.c" "/Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/philo_time.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

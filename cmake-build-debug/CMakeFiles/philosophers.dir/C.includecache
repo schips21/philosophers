@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/schips/Desktop/philosophers/main.c
+/Users/schips/Desktop/philosophers/philo_time.c
 philosophers_header.h
 /Users/schips/Desktop/philosophers/philosophers_header.h
 
@@ -16,6 +16,8 @@ unistd.h
 pthread.h
 -
 stdlib.h
+-
+sys/time.h
 -
 stdio.h
 -

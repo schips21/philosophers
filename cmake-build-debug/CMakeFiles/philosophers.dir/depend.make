@@ -7,12 +7,15 @@ CMakeFiles/philosophers.dir/ft_atoi.c.o: ../philosophers_header.h
 CMakeFiles/philosophers.dir/ft_itoa.c.o: ../ft_itoa.c
 CMakeFiles/philosophers.dir/ft_itoa.c.o: ../philosophers_header.h
 
-CMakeFiles/philosophers.dir/ft_putstr_fd.c.o: ../ft_putstr_fd.c
-CMakeFiles/philosophers.dir/ft_putstr_fd.c.o: ../philosophers_header.h
-
 CMakeFiles/philosophers.dir/main.c.o: ../main.c
 CMakeFiles/philosophers.dir/main.c.o: ../philosophers_header.h
 
 CMakeFiles/philosophers.dir/philo_init.c.o: ../philo_init.c
 CMakeFiles/philosophers.dir/philo_init.c.o: ../philosophers_header.h
+
+CMakeFiles/philosophers.dir/philo_print.c.o: ../philo_print.c
+CMakeFiles/philosophers.dir/philo_print.c.o: ../philosophers_header.h
+
+CMakeFiles/philosophers.dir/philo_time.c.o: ../philo_time.c
+CMakeFiles/philosophers.dir/philo_time.c.o: ../philosophers_header.h
 

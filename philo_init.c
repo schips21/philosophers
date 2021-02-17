@@ -13,23 +13,23 @@ int		init_philo(t_all *all)
 		all->philo[i].philo_id = i;
 		all->philo[i].philo_num_char = ft_itoa(all->philo[i].philo_id + 1);
 		all->philo[i].print = all->forks[all->ph_count];
-		pthread_mutex_lock(all->forks[all->ph_count]);
-		printf("Philo %d left %d right ", i, i);
-		pthread_mutex_unlock(all->forks[all->ph_count]);
+//		pthread_mutex_lock(all->forks[all->ph_count]);
+//		printf("Philo %d left %d right ", i, i);
+//		pthread_mutex_unlock(all->forks[all->ph_count]);
 		all->philo[i].left_fork = all->forks[i];
 		if (i == 0)
 		{
 			all->philo[i].right_fork = all->forks[all->ph_count - 1];
-			pthread_mutex_lock(all->forks[all->ph_count]);
-			printf("%d\n", all->ph_count - 1);
-			pthread_mutex_unlock(all->forks[all->ph_count]);
+//			pthread_mutex_lock(all->forks[all->ph_count]);
+//			printf("%d\n", all->ph_count - 1);
+//			pthread_mutex_unlock(all->forks[all->ph_count]);
 		}
 		else
 		{
 			all->philo[i].right_fork = all->forks[i - 1];
-			pthread_mutex_lock(all->forks[all->ph_count]);
-			printf("%d\n", i - 1);
-			pthread_mutex_unlock(all->forks[all->ph_count]);
+//			pthread_mutex_lock(all->forks[all->ph_count]);
+//			printf("%d\n", i - 1);
+//			pthread_mutex_unlock(all->forks[all->ph_count]);
 		}
 		all->philo[i].max_eat = all->info->must_eat;
 		all->philo[i].info = all->info;

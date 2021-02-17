@@ -197,33 +197,6 @@ ft_itoa.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_itoa.c.s
 .PHONY : ft_itoa.c.s
 
-ft_putstr_fd.o: ft_putstr_fd.c.o
-
-.PHONY : ft_putstr_fd.o
-
-# target to build an object file
-ft_putstr_fd.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_putstr_fd.c.o
-.PHONY : ft_putstr_fd.c.o
-
-ft_putstr_fd.i: ft_putstr_fd.c.i
-
-.PHONY : ft_putstr_fd.i
-
-# target to preprocess a source file
-ft_putstr_fd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_putstr_fd.c.i
-.PHONY : ft_putstr_fd.c.i
-
-ft_putstr_fd.s: ft_putstr_fd.c.s
-
-.PHONY : ft_putstr_fd.s
-
-# target to generate assembly for a file
-ft_putstr_fd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_putstr_fd.c.s
-.PHONY : ft_putstr_fd.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -278,6 +251,60 @@ philo_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_init.c.s
 .PHONY : philo_init.c.s
 
+philo_print.o: philo_print.c.o
+
+.PHONY : philo_print.o
+
+# target to build an object file
+philo_print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.o
+.PHONY : philo_print.c.o
+
+philo_print.i: philo_print.c.i
+
+.PHONY : philo_print.i
+
+# target to preprocess a source file
+philo_print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.i
+.PHONY : philo_print.c.i
+
+philo_print.s: philo_print.c.s
+
+.PHONY : philo_print.s
+
+# target to generate assembly for a file
+philo_print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.s
+.PHONY : philo_print.c.s
+
+philo_time.o: philo_time.c.o
+
+.PHONY : philo_time.o
+
+# target to build an object file
+philo_time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.o
+.PHONY : philo_time.c.o
+
+philo_time.i: philo_time.c.i
+
+.PHONY : philo_time.i
+
+# target to preprocess a source file
+philo_time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.i
+.PHONY : philo_time.c.i
+
+philo_time.s: philo_time.c.s
+
+.PHONY : philo_time.s
+
+# target to generate assembly for a file
+philo_time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.s
+.PHONY : philo_time.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -293,15 +320,18 @@ help:
 	@echo "... ft_itoa.o"
 	@echo "... ft_itoa.i"
 	@echo "... ft_itoa.s"
-	@echo "... ft_putstr_fd.o"
-	@echo "... ft_putstr_fd.i"
-	@echo "... ft_putstr_fd.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... philo_init.o"
 	@echo "... philo_init.i"
 	@echo "... philo_init.s"
+	@echo "... philo_print.o"
+	@echo "... philo_print.i"
+	@echo "... philo_print.s"
+	@echo "... philo_time.o"
+	@echo "... philo_time.i"
+	@echo "... philo_time.s"
 .PHONY : help
 
 
