@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/schips/Desktop/philosophers
+CMAKE_SOURCE_DIR = /Users/tatiana/Desktop/philo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/schips/Desktop/philosophers/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/tatiana/Desktop/philo/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles /Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tatiana/Desktop/philo/cmake-build-debug/CMakeFiles /Users/tatiana/Desktop/philo/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/schips/Desktop/philosophers/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tatiana/Desktop/philo/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -251,6 +251,33 @@ philo_init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_init.c.s
 .PHONY : philo_init.c.s
 
+philo_life_circle.o: philo_life_circle.c.o
+
+.PHONY : philo_life_circle.o
+
+# target to build an object file
+philo_life_circle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.o
+.PHONY : philo_life_circle.c.o
+
+philo_life_circle.i: philo_life_circle.c.i
+
+.PHONY : philo_life_circle.i
+
+# target to preprocess a source file
+philo_life_circle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.i
+.PHONY : philo_life_circle.c.i
+
+philo_life_circle.s: philo_life_circle.c.s
+
+.PHONY : philo_life_circle.s
+
+# target to generate assembly for a file
+philo_life_circle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.s
+.PHONY : philo_life_circle.c.s
+
 philo_print.o: philo_print.c.o
 
 .PHONY : philo_print.o
@@ -326,6 +353,9 @@ help:
 	@echo "... philo_init.o"
 	@echo "... philo_init.i"
 	@echo "... philo_init.s"
+	@echo "... philo_life_circle.o"
+	@echo "... philo_life_circle.i"
+	@echo "... philo_life_circle.s"
 	@echo "... philo_print.o"
 	@echo "... philo_print.i"
 	@echo "... philo_print.s"

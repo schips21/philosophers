@@ -6,11 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/Users/schips/Desktop/philosophers/philo_time.c
+/Users/tatiana/Desktop/philo/ft_atoi.c
 philosophers_header.h
-/Users/schips/Desktop/philosophers/philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
 
-/Users/schips/Desktop/philosophers/philosophers_header.h
+/Users/tatiana/Desktop/philo/ft_itoa.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/main.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/philo_init.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/philo_life_circle.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/philo_print.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/philo_time.c
+philosophers_header.h
+/Users/tatiana/Desktop/philo/philosophers_header.h
+
+/Users/tatiana/Desktop/philo/philosophers_header.h
 unistd.h
 -
 pthread.h

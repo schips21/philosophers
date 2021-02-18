@@ -13,6 +13,9 @@ CMakeFiles/philosophers.dir/main.c.o: ../philosophers_header.h
 CMakeFiles/philosophers.dir/philo_init.c.o: ../philo_init.c
 CMakeFiles/philosophers.dir/philo_init.c.o: ../philosophers_header.h
 
+CMakeFiles/philosophers.dir/philo_life_circle.c.o: ../philo_life_circle.c
+CMakeFiles/philosophers.dir/philo_life_circle.c.o: ../philosophers_header.h
+
 CMakeFiles/philosophers.dir/philo_print.c.o: ../philo_print.c
 CMakeFiles/philosophers.dir/philo_print.c.o: ../philosophers_header.h
 

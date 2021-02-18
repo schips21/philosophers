@@ -17,6 +17,7 @@ typedef	struct				s_info
 	int						time_eat;
 	int						time_sleep;
 	int						must_eat;
+	int                     flag_death;
 }							t_info;
 
 typedef	struct				s_philo
@@ -28,6 +29,7 @@ typedef	struct				s_philo
 	pthread_mutex_t			*right_fork;
 	pthread_mutex_t			*print;
 	t_info					*info;
+	long                    time_start_eat;
 }							t_philo;
 
 typedef	struct				s_all
@@ -54,8 +56,12 @@ char	*ft_itoa(int n);
 size_t	ft_strlen(const char *s);
 
 long	get_time_in_millisec();
-void	philo_accurate_usleep(long time_to);
+long	get_cur_time();
+void	philo_accurate_usleep(long time_to, t_philo	*philo);
 void	philo_print(char *str, t_philo *philo);
 
+void    eat_odd_philo(t_philo	*philo);
+void    eat_even_philo(t_philo	*philo);
+void    sleep_and_think(t_philo	*philo);
 
 #endif

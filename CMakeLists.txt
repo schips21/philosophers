@@ -10,4 +10,5 @@ add_executable(philosophers
         philo_init.c
         ft_atoi.c
         ft_itoa.c
-        philo_time.c)
+        philo_time.c
+        philo_life_circle.c)
