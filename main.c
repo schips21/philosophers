@@ -11,15 +11,16 @@ void	*philo_life(void *philo_2)
 	t_philo	*philo;
 
 	philo = (t_philo *)philo_2;
+	philo->time_start_eat = get_cur_time();
 	while (philo->max_eat != -2)
 	{
 		//eat
 		if (philo->philo_id % 2 != 0)
-            eat_odd_philo(philo);
+			eat_odd_philo(philo);
 		else
-            eat_even_philo(philo);
+			eat_even_philo(philo);
 		//sleep and think
-        sleep_and_think(philo);
+		sleep_and_think(philo);
 	}
 	return (0x000);
 }
@@ -44,10 +45,23 @@ int main(int argc, char **argv)
 	{
 		pthread_create(&(all->ph_thread[i]), NULL, philo_life, (void *)&(all->philo[i]));
 		i++;
+		usleep(10);
 	}
+	usleep(10);
+	i = 0;
 	while (all->info->flag_death == 0)
 	{
-		int i =0;
+		if (get_cur_time() - all->philo[i].time_start_eat > all->info->time_die)
+		{
+			pthread_mutex_lock(all->philo[i].print); //для вывода
+//			printf("%ld %ld\n", get_cur_time() - start_time, all->philo[i].time_start_eat - start_time);
+			if (all->info->flag_death == 0)
+				printf("%ld %s died\n", get_time_in_millisec(), all->philo[i].philo_num_char);
+			pthread_mutex_unlock(all->philo[i].print); //для вывода
+			all->info->flag_death = 1;
+			break;
+		}
+		i = (i + 1) % all->ph_count;
 	}
 	return (0);
 }

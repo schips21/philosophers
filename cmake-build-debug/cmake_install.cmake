@@ -1,4 +1,4 @@
-# Install script for directory: /Users/tatiana/Desktop/philo
+# Install script for directory: /Users/schips/Desktop/git_philo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/tatiana/Desktop/philo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/schips/Desktop/git_philo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
