@@ -12,7 +12,7 @@ void	*philo_life(void *philo_2)
 
 	philo = (t_philo *)philo_2;
 	philo->time_start_eat = get_cur_time();
-	while (philo->max_eat != -2)
+	while (philo->info->flag_death != 1)
 	{
 		//eat
 		if (philo->philo_id % 2 != 0)
@@ -43,9 +43,11 @@ int main(int argc, char **argv)
 	all->info->flag_death = 0;
 	while (i < all->ph_count)
 	{
+//		if (i % 2 == 1)
+//			usleep(100);
 		pthread_create(&(all->ph_thread[i]), NULL, philo_life, (void *)&(all->philo[i]));
 		i++;
-		usleep(10);
+		usleep(30);
 	}
 	usleep(10);
 	i = 0;
@@ -56,7 +58,7 @@ int main(int argc, char **argv)
 			pthread_mutex_lock(all->philo[i].print); //для вывода
 //			printf("%ld %ld\n", get_cur_time() - start_time, all->philo[i].time_start_eat - start_time);
 			if (all->info->flag_death == 0)
-				printf("%ld %s died\n", get_time_in_millisec(), all->philo[i].philo_num_char);
+				printf("%ld %s died in main %ld\n", get_time_in_millisec(), all->philo[i].philo_num_char, get_cur_time() - all->philo[i].time_start_eat);
 			pthread_mutex_unlock(all->philo[i].print); //для вывода
 			all->info->flag_death = 1;
 			break;

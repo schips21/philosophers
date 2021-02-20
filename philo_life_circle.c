@@ -9,7 +9,7 @@ void eat_odd_philo(t_philo	*philo)
 		pthread_mutex_unlock(philo->right_fork);
 		return;
 	}
-	else if (get_cur_time() - philo->time_start_eat >= philo->info->time_die)
+	if (get_cur_time() - philo->time_start_eat > philo->info->time_die)
 	{
 		pthread_mutex_lock(philo->print); //для вывода
 		if (philo->info->flag_death == 0)
@@ -27,7 +27,6 @@ void eat_odd_philo(t_philo	*philo)
 
 
 	pthread_mutex_lock(philo->left_fork);
-
 	if (philo->info->flag_death == 1)
 	{
 		pthread_mutex_unlock(philo->left_fork);
@@ -56,7 +55,7 @@ void eat_even_philo(t_philo	*philo)
 		pthread_mutex_unlock(philo->left_fork);
 		return;
 	}
-	else if (get_cur_time() - philo->time_start_eat >= philo->info->time_die)
+	if (get_cur_time() - philo->time_start_eat > philo->info->time_die)
 	{
 		pthread_mutex_lock(philo->print); //для вывода
 		if (philo->info->flag_death == 0)

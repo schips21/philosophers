@@ -65,6 +65,8 @@ int		init_all(t_all *all, int argc, char **argv)
 {
 	all->ph_count = ft_atoi(argv[1]);
 	all->info->time_die = ft_atoi(argv[2]);
+//	if (all->ph_count % 2 == 1)
+//		all->info->time_die += 10;
 	all->info->time_eat = ft_atoi(argv[3]);
 	all->info->time_sleep = ft_atoi(argv[4]);
 	if (argc == 5)

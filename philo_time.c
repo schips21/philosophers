@@ -28,10 +28,10 @@ void	philo_accurate_usleep(long time_to, t_philo	*philo)
 	gettimeofday(&t, DST_NONE);
 	current_time = t.tv_sec * 1000 + t.tv_usec / 1000;
 	res_time = current_time + time_to;
-//	current_time = res_time * 0.9;
+//	current_time = res_time * 0.8;
 	while (current_time <= res_time && philo->info->flag_death == 0)
 	{
-//		usleep(100);
+		usleep(100);
 		gettimeofday(&t, DST_NONE);
 		current_time = t.tv_sec * 1000 + t.tv_usec / 1000;
 		if (current_time - philo->time_start_eat >= philo->info->time_die)
