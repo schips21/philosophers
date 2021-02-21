@@ -34,14 +34,16 @@ void	philo_accurate_usleep(long time_to, t_philo	*philo)
 		usleep(100);
 		gettimeofday(&t, DST_NONE);
 		current_time = t.tv_sec * 1000 + t.tv_usec / 1000;
-		if (current_time - philo->time_start_eat >= philo->info->time_die)
-		{
-			pthread_mutex_lock(philo->print); //для вывода
-			if (philo->info->flag_death == 0)
-				printf("%ld %s died\n", get_time_in_millisec(), philo->philo_num_char);
-			pthread_mutex_unlock(philo->print); //для вывода
-			philo->info->flag_death = 1;
+//		if (current_time - philo->time_start_eat > philo->info->time_die)
+//		{
+//			pthread_mutex_lock(philo->print); //для вывода
+//			if (philo->info->flag_death == 0)
+//				printf("%ld %s died\n", get_time_in_millisec(), philo->philo_num_char);
+//			pthread_mutex_unlock(philo->print); //для вывода
+//			philo->info->flag_death = 1;
+//			break;
+//		}
+		if (philo->info->flag_death == 1)
 			break;
-		}
 	}
 }

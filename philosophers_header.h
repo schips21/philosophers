@@ -18,6 +18,8 @@ typedef	struct				s_info
 	int						time_sleep;
 	int						must_eat;
 	int                     flag_death;
+	pthread_mutex_t			*lock_for_even_odd;
+	int						end_eat;
 }							t_info;
 
 typedef	struct				s_philo
@@ -30,6 +32,8 @@ typedef	struct				s_philo
 	pthread_mutex_t			*print;
 	t_info					*info;
 	long                    time_start_eat;
+	int						need_to_eat;
+//	long					start_for_philo;
 }							t_philo;
 
 typedef	struct				s_all

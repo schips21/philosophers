@@ -13,9 +13,6 @@ int		init_philo(t_all *all)
 		all->philo[i].philo_id = i;
 		all->philo[i].philo_num_char = ft_itoa(all->philo[i].philo_id + 1);
 		all->philo[i].print = all->forks[all->ph_count];
-//		pthread_mutex_lock(all->forks[all->ph_count]);
-//		printf("Philo %d left %d right ", i, i);
-//		pthread_mutex_unlock(all->forks[all->ph_count]);
 		all->philo[i].left_fork = all->forks[i];
 		if (i == 0)
 		{
@@ -33,6 +30,11 @@ int		init_philo(t_all *all)
 		}
 		all->philo[i].max_eat = all->info->must_eat;
 		all->philo[i].info = all->info;
+		all->philo[i].time_start_eat = get_cur_time();
+		if (all->info->must_eat == -1)
+			all->philo[i].need_to_eat = -1;
+		else
+			all->philo[i].need_to_eat = all->info->must_eat;
 		i++;
 	}
 	return (0);
@@ -64,9 +66,11 @@ int		init_forks(t_all *all)
 int		init_all(t_all *all, int argc, char **argv)
 {
 	all->ph_count = ft_atoi(argv[1]);
+	all->info->ph_count = all->ph_count;
 	all->info->time_die = ft_atoi(argv[2]);
 //	if (all->ph_count % 2 == 1)
 //		all->info->time_die += 10;
+	all->info->end_eat = 0;
 	all->info->time_eat = ft_atoi(argv[3]);
 	all->info->time_sleep = ft_atoi(argv[4]);
 	if (argc == 5)
