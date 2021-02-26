@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/schips/Desktop/git_philo/philo_one/philo_init.c
+philosophers_header.h
+/Users/schips/Desktop/git_philo/philo_one/philosophers_header.h
+
+/Users/schips/Desktop/git_philo/philo_one/philosophers_header.h
+unistd.h
+-
+pthread.h
+-
+stdlib.h
+-
+sys/time.h
+-
+stdio.h
+-
+

@@ -45,7 +45,6 @@ typedef	struct				s_all
 	pthread_mutex_t			**forks;
 }							t_all;
 
-int		main(int argc, char **argv);
 int		philo_error(char *str);
 
 void	ft_putchar_fd(char c, int fd);

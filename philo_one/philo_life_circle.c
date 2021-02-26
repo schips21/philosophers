@@ -1,53 +1,5 @@
 #include "philosophers_header.h"
 
-void eat_odd_philo(t_philo	*philo)
-{
-	pthread_mutex_lock(philo->right_fork);
-
-	if (philo->info->flag_death == 1)
-	{
-		pthread_mutex_unlock(philo->right_fork);
-		return;
-	}
-//	if (get_cur_time() - philo->time_start_eat > philo->info->time_die)
-//	{
-//		pthread_mutex_lock(philo->print); //для вывода
-//		if (philo->info->flag_death == 0)
-//			printf("%ld %s died\n", get_time_in_millisec(), philo->philo_num_char);
-//		pthread_mutex_unlock(philo->print); //для вывода
-//		pthread_mutex_unlock(philo->right_fork);
-//		philo->info->flag_death = 1;
-//		return;
-//	}
-
-
-
-	pthread_mutex_lock(philo->print); //для вывода
-	printf("%ld %s has taken a right fork\n", get_time_in_millisec(), philo->philo_num_char);
-//	philo_print(" has taken a right fork\n", philo);
-	pthread_mutex_unlock(philo->print);
-
-
-	pthread_mutex_lock(philo->left_fork);
-	if (philo->info->flag_death == 1)
-	{
-		pthread_mutex_unlock(philo->left_fork);
-		return;
-	}
-
-	pthread_mutex_lock(philo->print); //для вывода
-	printf("%ld %s has taken a left fork\n", get_time_in_millisec(), philo->philo_num_char);
-	printf("%ld %s is eating\n", get_time_in_millisec(), philo->philo_num_char);
-//	philo_print(" has taken a left fork\n", philo);
-//	philo_print(" is eating\n", philo);
-	pthread_mutex_unlock(philo->print);
-
-	philo->time_start_eat = get_cur_time();
-	philo_accurate_usleep(philo->info->time_eat, philo);
-	pthread_mutex_unlock(philo->left_fork);
-	pthread_mutex_unlock(philo->right_fork);
-}
-
 void eat_even_philo(t_philo	*philo)
 {
 	pthread_mutex_lock(philo->left_fork);

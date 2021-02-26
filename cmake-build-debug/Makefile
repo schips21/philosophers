@@ -131,206 +131,381 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named philosophers
+# Target rules for targets named philo_two
 
 # Build rule for target.
-philosophers: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philosophers
-.PHONY : philosophers
+philo_two: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_two
+.PHONY : philo_two
 
 # fast build rule for target.
-philosophers/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/build
-.PHONY : philosophers/fast
+philo_two/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
+.PHONY : philo_two/fast
 
-ft_atoi.o: ft_atoi.c.o
+#=============================================================================
+# Target rules for targets named philo_one
 
-.PHONY : ft_atoi.o
+# Build rule for target.
+philo_one: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 philo_one
+.PHONY : philo_one
 
-# target to build an object file
-ft_atoi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_atoi.c.o
-.PHONY : ft_atoi.c.o
+# fast build rule for target.
+philo_one/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/build
+.PHONY : philo_one/fast
 
-ft_atoi.i: ft_atoi.c.i
+philo_one/ft_atoi.o: philo_one/ft_atoi.c.o
 
-.PHONY : ft_atoi.i
-
-# target to preprocess a source file
-ft_atoi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_atoi.c.i
-.PHONY : ft_atoi.c.i
-
-ft_atoi.s: ft_atoi.c.s
-
-.PHONY : ft_atoi.s
-
-# target to generate assembly for a file
-ft_atoi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_atoi.c.s
-.PHONY : ft_atoi.c.s
-
-ft_itoa.o: ft_itoa.c.o
-
-.PHONY : ft_itoa.o
+.PHONY : philo_one/ft_atoi.o
 
 # target to build an object file
-ft_itoa.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_itoa.c.o
-.PHONY : ft_itoa.c.o
+philo_one/ft_atoi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.o
+.PHONY : philo_one/ft_atoi.c.o
 
-ft_itoa.i: ft_itoa.c.i
+philo_one/ft_atoi.i: philo_one/ft_atoi.c.i
 
-.PHONY : ft_itoa.i
+.PHONY : philo_one/ft_atoi.i
 
 # target to preprocess a source file
-ft_itoa.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_itoa.c.i
-.PHONY : ft_itoa.c.i
+philo_one/ft_atoi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.i
+.PHONY : philo_one/ft_atoi.c.i
 
-ft_itoa.s: ft_itoa.c.s
+philo_one/ft_atoi.s: philo_one/ft_atoi.c.s
 
-.PHONY : ft_itoa.s
+.PHONY : philo_one/ft_atoi.s
 
 # target to generate assembly for a file
-ft_itoa.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/ft_itoa.c.s
-.PHONY : ft_itoa.c.s
+philo_one/ft_atoi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_atoi.c.s
+.PHONY : philo_one/ft_atoi.c.s
 
-main.o: main.c.o
+philo_one/ft_itoa.o: philo_one/ft_itoa.c.o
 
-.PHONY : main.o
+.PHONY : philo_one/ft_itoa.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/main.c.o
-.PHONY : main.c.o
+philo_one/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_itoa.c.o
+.PHONY : philo_one/ft_itoa.c.o
 
-main.i: main.c.i
+philo_one/ft_itoa.i: philo_one/ft_itoa.c.i
 
-.PHONY : main.i
+.PHONY : philo_one/ft_itoa.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/main.c.i
-.PHONY : main.c.i
+philo_one/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_itoa.c.i
+.PHONY : philo_one/ft_itoa.c.i
 
-main.s: main.c.s
+philo_one/ft_itoa.s: philo_one/ft_itoa.c.s
 
-.PHONY : main.s
+.PHONY : philo_one/ft_itoa.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/main.c.s
-.PHONY : main.c.s
+philo_one/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/ft_itoa.c.s
+.PHONY : philo_one/ft_itoa.c.s
 
-philo_init.o: philo_init.c.o
+philo_one/main.o: philo_one/main.c.o
 
-.PHONY : philo_init.o
+.PHONY : philo_one/main.o
 
 # target to build an object file
-philo_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_init.c.o
-.PHONY : philo_init.c.o
+philo_one/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/main.c.o
+.PHONY : philo_one/main.c.o
 
-philo_init.i: philo_init.c.i
+philo_one/main.i: philo_one/main.c.i
 
-.PHONY : philo_init.i
+.PHONY : philo_one/main.i
 
 # target to preprocess a source file
-philo_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_init.c.i
-.PHONY : philo_init.c.i
+philo_one/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/main.c.i
+.PHONY : philo_one/main.c.i
 
-philo_init.s: philo_init.c.s
+philo_one/main.s: philo_one/main.c.s
 
-.PHONY : philo_init.s
+.PHONY : philo_one/main.s
 
 # target to generate assembly for a file
-philo_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_init.c.s
-.PHONY : philo_init.c.s
+philo_one/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/main.c.s
+.PHONY : philo_one/main.c.s
 
-philo_life_circle.o: philo_life_circle.c.o
+philo_one/philo_init.o: philo_one/philo_init.c.o
 
-.PHONY : philo_life_circle.o
+.PHONY : philo_one/philo_init.o
 
 # target to build an object file
-philo_life_circle.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.o
-.PHONY : philo_life_circle.c.o
+philo_one/philo_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_init.c.o
+.PHONY : philo_one/philo_init.c.o
 
-philo_life_circle.i: philo_life_circle.c.i
+philo_one/philo_init.i: philo_one/philo_init.c.i
 
-.PHONY : philo_life_circle.i
+.PHONY : philo_one/philo_init.i
 
 # target to preprocess a source file
-philo_life_circle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.i
-.PHONY : philo_life_circle.c.i
+philo_one/philo_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_init.c.i
+.PHONY : philo_one/philo_init.c.i
 
-philo_life_circle.s: philo_life_circle.c.s
+philo_one/philo_init.s: philo_one/philo_init.c.s
 
-.PHONY : philo_life_circle.s
+.PHONY : philo_one/philo_init.s
 
 # target to generate assembly for a file
-philo_life_circle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_life_circle.c.s
-.PHONY : philo_life_circle.c.s
+philo_one/philo_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_init.c.s
+.PHONY : philo_one/philo_init.c.s
 
-philo_print.o: philo_print.c.o
+philo_one/philo_life_circle.o: philo_one/philo_life_circle.c.o
 
-.PHONY : philo_print.o
+.PHONY : philo_one/philo_life_circle.o
 
 # target to build an object file
-philo_print.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.o
-.PHONY : philo_print.c.o
+philo_one/philo_life_circle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_life_circle.c.o
+.PHONY : philo_one/philo_life_circle.c.o
 
-philo_print.i: philo_print.c.i
+philo_one/philo_life_circle.i: philo_one/philo_life_circle.c.i
 
-.PHONY : philo_print.i
+.PHONY : philo_one/philo_life_circle.i
 
 # target to preprocess a source file
-philo_print.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.i
-.PHONY : philo_print.c.i
+philo_one/philo_life_circle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_life_circle.c.i
+.PHONY : philo_one/philo_life_circle.c.i
 
-philo_print.s: philo_print.c.s
+philo_one/philo_life_circle.s: philo_one/philo_life_circle.c.s
 
-.PHONY : philo_print.s
+.PHONY : philo_one/philo_life_circle.s
 
 # target to generate assembly for a file
-philo_print.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_print.c.s
-.PHONY : philo_print.c.s
+philo_one/philo_life_circle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_life_circle.c.s
+.PHONY : philo_one/philo_life_circle.c.s
 
-philo_time.o: philo_time.c.o
+philo_one/philo_print.o: philo_one/philo_print.c.o
 
-.PHONY : philo_time.o
+.PHONY : philo_one/philo_print.o
 
 # target to build an object file
-philo_time.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.o
-.PHONY : philo_time.c.o
+philo_one/philo_print.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_print.c.o
+.PHONY : philo_one/philo_print.c.o
 
-philo_time.i: philo_time.c.i
+philo_one/philo_print.i: philo_one/philo_print.c.i
 
-.PHONY : philo_time.i
+.PHONY : philo_one/philo_print.i
 
 # target to preprocess a source file
-philo_time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.i
-.PHONY : philo_time.c.i
+philo_one/philo_print.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_print.c.i
+.PHONY : philo_one/philo_print.c.i
 
-philo_time.s: philo_time.c.s
+philo_one/philo_print.s: philo_one/philo_print.c.s
 
-.PHONY : philo_time.s
+.PHONY : philo_one/philo_print.s
 
 # target to generate assembly for a file
-philo_time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philo_time.c.s
-.PHONY : philo_time.c.s
+philo_one/philo_print.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_print.c.s
+.PHONY : philo_one/philo_print.c.s
+
+philo_one/philo_time.o: philo_one/philo_time.c.o
+
+.PHONY : philo_one/philo_time.o
+
+# target to build an object file
+philo_one/philo_time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_time.c.o
+.PHONY : philo_one/philo_time.c.o
+
+philo_one/philo_time.i: philo_one/philo_time.c.i
+
+.PHONY : philo_one/philo_time.i
+
+# target to preprocess a source file
+philo_one/philo_time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_time.c.i
+.PHONY : philo_one/philo_time.c.i
+
+philo_one/philo_time.s: philo_one/philo_time.c.s
+
+.PHONY : philo_one/philo_time.s
+
+# target to generate assembly for a file
+philo_one/philo_time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/philo_one/philo_time.c.s
+.PHONY : philo_one/philo_time.c.s
+
+philo_two/ft_atoi.o: philo_two/ft_atoi.c.o
+
+.PHONY : philo_two/ft_atoi.o
+
+# target to build an object file
+philo_two/ft_atoi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_atoi.c.o
+.PHONY : philo_two/ft_atoi.c.o
+
+philo_two/ft_atoi.i: philo_two/ft_atoi.c.i
+
+.PHONY : philo_two/ft_atoi.i
+
+# target to preprocess a source file
+philo_two/ft_atoi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_atoi.c.i
+.PHONY : philo_two/ft_atoi.c.i
+
+philo_two/ft_atoi.s: philo_two/ft_atoi.c.s
+
+.PHONY : philo_two/ft_atoi.s
+
+# target to generate assembly for a file
+philo_two/ft_atoi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_atoi.c.s
+.PHONY : philo_two/ft_atoi.c.s
+
+philo_two/ft_itoa.o: philo_two/ft_itoa.c.o
+
+.PHONY : philo_two/ft_itoa.o
+
+# target to build an object file
+philo_two/ft_itoa.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_itoa.c.o
+.PHONY : philo_two/ft_itoa.c.o
+
+philo_two/ft_itoa.i: philo_two/ft_itoa.c.i
+
+.PHONY : philo_two/ft_itoa.i
+
+# target to preprocess a source file
+philo_two/ft_itoa.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_itoa.c.i
+.PHONY : philo_two/ft_itoa.c.i
+
+philo_two/ft_itoa.s: philo_two/ft_itoa.c.s
+
+.PHONY : philo_two/ft_itoa.s
+
+# target to generate assembly for a file
+philo_two/ft_itoa.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/ft_itoa.c.s
+.PHONY : philo_two/ft_itoa.c.s
+
+philo_two/main.o: philo_two/main.c.o
+
+.PHONY : philo_two/main.o
+
+# target to build an object file
+philo_two/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.o
+.PHONY : philo_two/main.c.o
+
+philo_two/main.i: philo_two/main.c.i
+
+.PHONY : philo_two/main.i
+
+# target to preprocess a source file
+philo_two/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.i
+.PHONY : philo_two/main.c.i
+
+philo_two/main.s: philo_two/main.c.s
+
+.PHONY : philo_two/main.s
+
+# target to generate assembly for a file
+philo_two/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/main.c.s
+.PHONY : philo_two/main.c.s
+
+philo_two/philo_init.o: philo_two/philo_init.c.o
+
+.PHONY : philo_two/philo_init.o
+
+# target to build an object file
+philo_two/philo_init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_init.c.o
+.PHONY : philo_two/philo_init.c.o
+
+philo_two/philo_init.i: philo_two/philo_init.c.i
+
+.PHONY : philo_two/philo_init.i
+
+# target to preprocess a source file
+philo_two/philo_init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_init.c.i
+.PHONY : philo_two/philo_init.c.i
+
+philo_two/philo_init.s: philo_two/philo_init.c.s
+
+.PHONY : philo_two/philo_init.s
+
+# target to generate assembly for a file
+philo_two/philo_init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_init.c.s
+.PHONY : philo_two/philo_init.c.s
+
+philo_two/philo_life_circle.o: philo_two/philo_life_circle.c.o
+
+.PHONY : philo_two/philo_life_circle.o
+
+# target to build an object file
+philo_two/philo_life_circle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_life_circle.c.o
+.PHONY : philo_two/philo_life_circle.c.o
+
+philo_two/philo_life_circle.i: philo_two/philo_life_circle.c.i
+
+.PHONY : philo_two/philo_life_circle.i
+
+# target to preprocess a source file
+philo_two/philo_life_circle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_life_circle.c.i
+.PHONY : philo_two/philo_life_circle.c.i
+
+philo_two/philo_life_circle.s: philo_two/philo_life_circle.c.s
+
+.PHONY : philo_two/philo_life_circle.s
+
+# target to generate assembly for a file
+philo_two/philo_life_circle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_life_circle.c.s
+.PHONY : philo_two/philo_life_circle.c.s
+
+philo_two/philo_time.o: philo_two/philo_time.c.o
+
+.PHONY : philo_two/philo_time.o
+
+# target to build an object file
+philo_two/philo_time.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_time.c.o
+.PHONY : philo_two/philo_time.c.o
+
+philo_two/philo_time.i: philo_two/philo_time.c.i
+
+.PHONY : philo_two/philo_time.i
+
+# target to preprocess a source file
+philo_two/philo_time.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_time.c.i
+.PHONY : philo_two/philo_time.c.i
+
+philo_two/philo_time.s: philo_two/philo_time.c.s
+
+.PHONY : philo_two/philo_time.s
+
+# target to generate assembly for a file
+philo_two/philo_time.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/philo_two/philo_time.c.s
+.PHONY : philo_two/philo_time.c.s
 
 # Help Target
 help:
@@ -340,28 +515,47 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... philosophers"
-	@echo "... ft_atoi.o"
-	@echo "... ft_atoi.i"
-	@echo "... ft_atoi.s"
-	@echo "... ft_itoa.o"
-	@echo "... ft_itoa.i"
-	@echo "... ft_itoa.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... philo_init.o"
-	@echo "... philo_init.i"
-	@echo "... philo_init.s"
-	@echo "... philo_life_circle.o"
-	@echo "... philo_life_circle.i"
-	@echo "... philo_life_circle.s"
-	@echo "... philo_print.o"
-	@echo "... philo_print.i"
-	@echo "... philo_print.s"
-	@echo "... philo_time.o"
-	@echo "... philo_time.i"
-	@echo "... philo_time.s"
+	@echo "... philo_one"
+	@echo "... philo_two"
+	@echo "... philo_one/ft_atoi.o"
+	@echo "... philo_one/ft_atoi.i"
+	@echo "... philo_one/ft_atoi.s"
+	@echo "... philo_one/ft_itoa.o"
+	@echo "... philo_one/ft_itoa.i"
+	@echo "... philo_one/ft_itoa.s"
+	@echo "... philo_one/main.o"
+	@echo "... philo_one/main.i"
+	@echo "... philo_one/main.s"
+	@echo "... philo_one/philo_init.o"
+	@echo "... philo_one/philo_init.i"
+	@echo "... philo_one/philo_init.s"
+	@echo "... philo_one/philo_life_circle.o"
+	@echo "... philo_one/philo_life_circle.i"
+	@echo "... philo_one/philo_life_circle.s"
+	@echo "... philo_one/philo_print.o"
+	@echo "... philo_one/philo_print.i"
+	@echo "... philo_one/philo_print.s"
+	@echo "... philo_one/philo_time.o"
+	@echo "... philo_one/philo_time.i"
+	@echo "... philo_one/philo_time.s"
+	@echo "... philo_two/ft_atoi.o"
+	@echo "... philo_two/ft_atoi.i"
+	@echo "... philo_two/ft_atoi.s"
+	@echo "... philo_two/ft_itoa.o"
+	@echo "... philo_two/ft_itoa.i"
+	@echo "... philo_two/ft_itoa.s"
+	@echo "... philo_two/main.o"
+	@echo "... philo_two/main.i"
+	@echo "... philo_two/main.s"
+	@echo "... philo_two/philo_init.o"
+	@echo "... philo_two/philo_init.i"
+	@echo "... philo_two/philo_init.s"
+	@echo "... philo_two/philo_life_circle.o"
+	@echo "... philo_two/philo_life_circle.i"
+	@echo "... philo_two/philo_life_circle.s"
+	@echo "... philo_two/philo_time.o"
+	@echo "... philo_two/philo_time.i"
+	@echo "... philo_two/philo_time.s"
 .PHONY : help
 
 
