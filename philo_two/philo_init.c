@@ -24,15 +24,17 @@ int		init_philo(t_all *all)
 
 int		init_forks(t_all *all)
 {
-	if (!(all->info->forks = malloc(sizeof(sem_t*))))
-		return (philo_error("Malloc error\n"));
+	//if (!(all->info->forks = malloc(sizeof(sem_t*))))
+	//	return (philo_error("Malloc error\n"));
 //	all->info->forks = sem_open("/forks", O_CREAT | S_IRWXU, 0644, all->info->ph_count);
+	sem_unlink("/forks");
 	if ((all->info->forks = sem_open("/forks", O_CREAT, S_IRWXU, all->info->ph_count)) == SEM_FAILED)
 		return (philo_error("Semaphore error\n"));
 //	if (sem_init(all->info->forks, 0, all->ph_count) == -1)
 //		return (philo_error("Semaphore error\n"));
-	if (!(all->info->print = malloc(sizeof(sem_t*))))
-		return (philo_error("Malloc error\n"));
+	//if (!(all->info->print = malloc(sizeof(sem_t*))))
+	//	return (philo_error("Malloc error\n"));
+	sem_unlink("/print");
 	all->info->print = sem_open("/print", O_CREAT, S_IRWXU, 1);
 //	if (sem_init(all->info->print, 0, 1) == -1)
 //		return (philo_error("Semaphore error\n"));
