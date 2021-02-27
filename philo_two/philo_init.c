@@ -26,12 +26,14 @@ int		init_forks(t_all *all)
 {
 	if (!(all->info->forks = malloc(sizeof(sem_t*))))
 		return (philo_error("Malloc error\n"));
-	all->info->forks = sem_open("/forks", O_CREAT | S_IRWXU, 0644, all->info->ph_count);
+//	all->info->forks = sem_open("/forks", O_CREAT | S_IRWXU, 0644, all->info->ph_count);
+	if ((all->info->forks = sem_open("/forks", O_CREAT, S_IRWXU, all->info->ph_count)) == SEM_FAILED)
+		return (philo_error("Semaphore error\n"));
 //	if (sem_init(all->info->forks, 0, all->ph_count) == -1)
 //		return (philo_error("Semaphore error\n"));
 	if (!(all->info->print = malloc(sizeof(sem_t*))))
 		return (philo_error("Malloc error\n"));
-	all->info->print = sem_open("/print", O_CREAT | S_IRWXU, 0644, 1);
+	all->info->print = sem_open("/print", O_CREAT, S_IRWXU, 1);
 //	if (sem_init(all->info->print, 0, 1) == -1)
 //		return (philo_error("Semaphore error\n"));
 	return (0);
@@ -59,6 +61,5 @@ int		init_all(t_all *all, int argc, char **argv)
 		return (1);
 	// инициализация каждого философа
 	init_philo(all);
-	printf("%d\n", all->info->end_eat);
 	return (0);
 }

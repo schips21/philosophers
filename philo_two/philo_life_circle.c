@@ -2,7 +2,6 @@
 
 void eat_even_philo(t_philo	*philo)
 {
-	printf("Hello\n");
 	sem_wait(philo->info->forks);
 	if (philo->info->flag_death == 1)
 	{

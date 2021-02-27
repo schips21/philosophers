@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/schips/Desktop/git_philo/philo_two/main.c
-philosophers_header.h
-/Users/schips/Desktop/git_philo/philo_two/philosophers_header.h
-
-/Users/schips/Desktop/git_philo/philo_two/philo_life_circle.c
+/Users/schips/Desktop/git_philo/philo_two/philo_init.c
 philosophers_header.h
 /Users/schips/Desktop/git_philo/philo_two/philosophers_header.h
 
@@ -24,6 +20,8 @@ stdlib.h
 sys/time.h
 -
 semaphore.h
+-
+sys/stat.h
 -
 stdio.h
 -
