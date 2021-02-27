@@ -15,19 +15,9 @@ int		init_philo(t_all *all)
 		all->philo[i].print = all->forks[all->ph_count];
 		all->philo[i].left_fork = all->forks[i];
 		if (i == 0)
-		{
 			all->philo[i].right_fork = all->forks[all->ph_count - 1];
-//			pthread_mutex_lock(all->forks[all->ph_count]);
-//			printf("%d\n", all->ph_count - 1);
-//			pthread_mutex_unlock(all->forks[all->ph_count]);
-		}
 		else
-		{
 			all->philo[i].right_fork = all->forks[i - 1];
-//			pthread_mutex_lock(all->forks[all->ph_count]);
-//			printf("%d\n", i - 1);
-//			pthread_mutex_unlock(all->forks[all->ph_count]);
-		}
 		all->philo[i].max_eat = all->info->must_eat;
 		all->philo[i].info = all->info;
 		all->philo[i].time_start_eat = get_cur_time();
@@ -45,11 +35,7 @@ int		init_forks(t_all *all)
 	int i;
 
 	i = 0;
-	ft_putnbr_fd(all->ph_count, 1);
 	all->forks = NULL;
-	//all->forks = (pthread_mutex_t **)malloc(sizeof(pthread_mutex_t *) * (all->ph_count + 1));
-//	malloc(100);
-	ft_putnbr_fd(all->ph_count, 1);
 	if (!(all->forks = (pthread_mutex_t **)malloc(sizeof(pthread_mutex_t *) * (all->ph_count + 1))))
 		return (philo_error("Malloc error\n"));
 	while (i <= all->ph_count)
@@ -73,8 +59,6 @@ int		init_all(t_all *all, int argc, char **argv)
 	all->ph_count = ft_atoi(argv[1]);
 	all->info->ph_count = all->ph_count;
 	all->info->time_die = ft_atoi(argv[2]);
-//	if (all->ph_count % 2 == 1)
-//		all->info->time_die += 10;
 	all->info->end_eat = 0;
 	all->info->time_eat = ft_atoi(argv[3]);
 	all->info->time_sleep = ft_atoi(argv[4]);
@@ -89,7 +73,5 @@ int		init_all(t_all *all, int argc, char **argv)
 		return (1);
 	// инициализация каждого философа
 	init_philo(all);
-
-
 	return (0);
 }
