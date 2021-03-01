@@ -5,8 +5,8 @@ int		init_philo(t_all *all)
 	int i;
 
 	i = 0;
-	if (!(all->ph_thread = malloc(sizeof(pthread_t) * all->ph_count)))
-		return (philo_error("Malloc error\n"));
+//	if (!(all->ph_thread = malloc(sizeof(pthread_t) * all->ph_count)))
+//		return (philo_error("Malloc error\n"));
 	while (i < all->ph_count)
 	{
 		all->philo[i].philo_id = i;

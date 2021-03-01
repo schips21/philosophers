@@ -62,19 +62,19 @@ int main(int argc, char **argv)
 		pthread_create(&(all->ph_thread[i]), NULL, philo_life, (void *)&(all->philo[i]));
 		i++;
 	}
-	i = 0;
-	while (all->info->flag_death == 0 && all->info->end_eat < all->info->ph_count)
-	{
-		if (get_cur_time() - all->philo[i].time_start_eat > all->info->time_die && all->philo[i].need_to_eat != 0)
-		{
-			sem_wait(all->info->print);
-			if (all->info->flag_death == 0)
-				printf("%ld %s died\n", get_time_in_millisec(), all->philo[i].philo_num_char);
-			sem_post(all->info->print);
-			all->info->flag_death = 1;
-			break;
-		}
-		i = (i + 1) % all->ph_count;
-	}
+//	i = 0;
+//	while (all->info->flag_death == 0 && all->info->end_eat < all->info->ph_count)
+//	{
+//		if (get_cur_time() - all->philo[i].time_start_eat > all->info->time_die && all->philo[i].need_to_eat != 0)
+//		{
+//			sem_wait(all->info->print);
+//			if (all->info->flag_death == 0)
+//				printf("%ld %s died\n", get_time_in_millisec(), all->philo[i].philo_num_char);
+//			sem_post(all->info->print);
+//			all->info->flag_death = 1;
+//			break;
+//		}
+//		i = (i + 1) % all->ph_count;
+//	}
 	return (0);
 }

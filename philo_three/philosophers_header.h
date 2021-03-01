@@ -32,6 +32,7 @@ typedef	struct				s_philo
 	t_info					*info;
 	long					time_start_eat;
 	int						need_to_eat;
+	pid_t					pid;
 }							t_philo;
 
 typedef	struct				s_all
