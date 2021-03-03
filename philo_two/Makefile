@@ -6,13 +6,13 @@
 #    By: schips <schips@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/03 21:38:52 by schips            #+#    #+#              #
-#    Updated: 2021/03/03 21:50:45 by schips           ###   ########.fr        #
+#    Updated: 2021/03/03 21:54:35 by schips           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philo_one
+NAME = philo_two
 
-SRCS = ft_atoi.c ft_itoa.c main.c philo_init.c philo_life_circle.c philo_print.c \
+SRCS = ft_atoi.c ft_itoa.c main.c philo_init.c philo_life_circle.c \
 		philo_time.c
 
 OBJS = $(SRCS:.c=.o)
