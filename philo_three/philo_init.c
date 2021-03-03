@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schips <schips@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/03 20:31:34 by schips            #+#    #+#             */
+/*   Updated: 2021/03/03 20:32:15 by schips           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philosophers_header.h"
 
 int		init_philo(t_all *all)
@@ -25,13 +37,16 @@ int		init_philo(t_all *all)
 int		init_forks(t_all *all)
 {
 	sem_unlink("/forks");
-	if ((all->info->forks = sem_open("/forks", O_CREAT, S_IRWXU, all->info->ph_count)) == SEM_FAILED)
+	if ((all->info->forks = sem_open("/forks", O_CREAT, S_IRWXU,
+	all->info->ph_count)) == SEM_FAILED)
 		return (philo_error("Semaphore error\n"));
 	sem_unlink("/print");
-	if ((all->info->print = sem_open("/print", O_CREAT, S_IRWXU, 1)) == SEM_FAILED)
+	if ((all->info->print = sem_open("/print", O_CREAT, S_IRWXU,
+	1)) == SEM_FAILED)
 		return (philo_error("Semaphore error\n"));
 	sem_unlink("/dead");
-	if ((all->info->dead_philo = sem_open("/dead", O_CREAT, S_IRWXU, 1)) == SEM_FAILED)
+	if ((all->info->dead_philo = sem_open("/dead", O_CREAT, S_IRWXU,
+	1)) == SEM_FAILED)
 		return (philo_error("Semaphore error\n"));
 	return (0);
 }
@@ -42,8 +57,8 @@ int		init_validation(t_all *all)
 	all->info->time_eat == -2 || all->info->time_sleep == -2 ||
 	all->info->must_eat == -2)
 		return (1);
-	if (all->ph_count > 200 || all->info->time_die < 60 || all->info->time_eat < 60 ||
-	all->info->time_sleep < 60)
+	if (all->ph_count > 200 || all->info->time_die < 60 ||
+	all->info->time_eat < 60 || all->info->time_sleep < 60)
 		return (1);
 	return (0);
 }

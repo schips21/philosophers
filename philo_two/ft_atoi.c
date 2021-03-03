@@ -12,19 +12,29 @@
 
 #include "philosophers_header.h"
 
-static int		ft_minus(const char *str, int i, int ans)
+void	ft_putchar_fd(char c, int fd)
 {
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		ans = ans * 10 - (str[i] - '0');
-		i++;
-	}
-	return (ans);
+	write(fd, &c, 1);
 }
 
-static int		ft_plus(const char *str, int i)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int ans;
+	size_t i;
+
+	i = 0;
+	if (s != 0)
+	{
+		while (s[i] != 0)
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
+	}
+}
+
+static long		ft_plus(const char *str, int i)
+{
+	long ans;
 
 	ans = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -32,34 +42,24 @@ static int		ft_plus(const char *str, int i)
 		ans = ans * 10 + str[i] - '0';
 		i++;
 	}
+	if (str[i] != '\0')
+		return (-2);
 	return (ans);
 }
 
 int				ft_atoi(const char *nptr)
 {
-	int i;
-	int ans;
+	int		i;
+	long	ans;
 
 	i = 0;
-	ans = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\f' || nptr[i] == '\n'
-	|| nptr[i] == '\r' || nptr[i] == '\t' || nptr[i] == '\v')
-		i++;
-	if (nptr[i] == '-' && (nptr[i + 1] >= '0' && nptr[i + 1] <= '9'))
-	{
-		i++;
-		ans -= nptr[i] - '0';
-		i++;
-		ans = ft_minus(nptr, i, ans);
-	}
-	else if (nptr[i] == '+' && (nptr[i + 1] >= '0' && nptr[i + 1] <= '9'))
-	{
-		i++;
-		ans = ft_plus(nptr, i);
-	}
-	else if (nptr[i] >= '0' && nptr[i] <= '9')
+	if (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		ans = ft_plus(nptr, i);
 	}
-	return (ans);
+	else
+		return (-2);
+	if (ans > 2147483647)
+		return (-2);
+	return ((int)ans);
 }

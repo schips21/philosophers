@@ -11,7 +11,7 @@ void eat_even_philo(t_philo	*philo)
 	}
 
 	sem_wait(philo->info->print);
-	printf("%ld %s has taken a left fork\n", get_time_in_millisec(), philo->philo_num_char);
+	printf("%ld %s has taken a fork\n", get_time_in_millisec(), philo->philo_num_char);
 	sem_post(philo->info->print);
 
 	if (philo->info->flag_death == 1)
@@ -21,7 +21,7 @@ void eat_even_philo(t_philo	*philo)
 	}
 
 	sem_wait(philo->info->print);
-	printf("%ld %s has taken a right fork\n", get_time_in_millisec(), philo->philo_num_char);
+	printf("%ld %s has taken a fork\n", get_time_in_millisec(), philo->philo_num_char);
 	printf("%ld %s is eating\n", get_time_in_millisec(), philo->philo_num_char);
 	sem_post(philo->info->print);
 

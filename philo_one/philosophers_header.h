@@ -1,14 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philosophers_header.h                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: schips <schips@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/03/03 20:53:29 by schips            #+#    #+#             */
+/*   Updated: 2021/03/03 21:05:25 by schips           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILOSOPHERS_HEADER_H
 # define PHILOSOPHERS_HEADER_H
 
-#include <unistd.h>
-#include <pthread.h>
-#include <stdlib.h>
-#include <sys/time.h>
+# include <unistd.h>
+# include <pthread.h>
+# include <stdlib.h>
+# include <sys/time.h>
+# include <stdio.h>
 
-#include <stdio.h>
-
-long start_time;
+long g_start_time;
 
 typedef	struct				s_info
 {
@@ -17,7 +28,7 @@ typedef	struct				s_info
 	int						time_eat;
 	int						time_sleep;
 	int						must_eat;
-	int                     flag_death;
+	int						flag_death;
 	pthread_mutex_t			*lock_for_even_odd;
 	int						end_eat;
 }							t_info;
@@ -31,9 +42,8 @@ typedef	struct				s_philo
 	pthread_mutex_t			*right_fork;
 	pthread_mutex_t			*print;
 	t_info					*info;
-	long                    time_start_eat;
+	long					time_start_eat;
 	int						need_to_eat;
-//	long					start_for_philo;
 }							t_philo;
 
 typedef	struct				s_all
@@ -45,26 +55,26 @@ typedef	struct				s_all
 	pthread_mutex_t			**forks;
 }							t_all;
 
-int		philo_error(char *str);
+int							philo_error(char *str);
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-int		init_all(t_all *all, int argc, char **argv);
-int		init_philo(t_all *all);
-int		init_forks(t_all *all);
-int		ft_atoi(const char *nptr);
-char	*ft_strdup(const char *s);
-char	*ft_itoa(int n);
-size_t	ft_strlen(const char *s);
+void						ft_putchar_fd(char c, int fd);
+void						ft_putstr_fd(char *s, int fd);
+void						ft_putnbr_fd(int n, int fd);
+int							init_all(t_all *all, int argc, char **argv);
+int							init_philo(t_all *all);
+int							init_forks(t_all *all);
+int							ft_atoi(const char *nptr);
+char						*ft_strdup(const char *s);
+char						*ft_itoa(int n);
+size_t						ft_strlen(const char *s);
 
-long	get_time_in_millisec();
-long	get_cur_time();
-void	philo_accurate_usleep(long time_to, t_philo	*philo);
-void	philo_print(char *str, t_philo *philo);
+long						get_time_in_millisec(void);
+long						get_cur_time(void);
+void						philo_accurate_usleep(long time_to, t_philo	*philo);
+void						philo_print(char *str, t_philo *philo);
 
-void    eat_odd_philo(t_philo	*philo);
-void    eat_even_philo(t_philo	*philo);
-void    sleep_and_think(t_philo	*philo);
+void						eat_even_philo(t_philo	*philo);
+void						sleep_and_think(t_philo	*philo);
+void						main_check_death(t_all *all, int i);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: schips <schips@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/25 19:21:50 by schips            #+#    #+#             */
-/*   Updated: 2021/01/10 13:37:54 by schips           ###   ########.fr       */
+/*   Updated: 2021/03/03 20:54:34 by schips           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers_header.h"
 
-size_t	ft_strlen(const char *s)
+size_t		ft_strlen(const char *s)
 {
 	size_t i;
 
@@ -22,8 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-
-char	*ft_strdup(const char *s)
+char		*ft_strdup(const char *s)
 {
 	char	*str;
 	int		i;
