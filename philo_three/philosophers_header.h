@@ -7,6 +7,7 @@
 #include <sys/time.h>
 #include <semaphore.h>
 #include <sys/stat.h>
+#include <signal.h>
 
 #include <stdio.h>
 
@@ -23,6 +24,8 @@ typedef	struct				s_info
 	int						end_eat;
 	sem_t					*print;
 	sem_t					*forks;
+	sem_t					*dead_philo;
+	pthread_t				*ph_thread;
 }							t_info;
 
 typedef	struct				s_philo
@@ -62,5 +65,6 @@ void	philo_accurate_usleep(long time_to, t_philo	*philo);
 
 void	eat_even_philo(t_philo	*philo);
 void	sleep_and_think(t_philo	*philo);
+int		init_validation(t_all *all);
 
 #endif

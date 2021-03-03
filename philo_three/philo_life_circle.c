@@ -3,6 +3,7 @@
 void eat_even_philo(t_philo	*philo)
 {
 	sem_wait(philo->info->forks);
+	sem_wait(philo->info->forks);
 	if (philo->info->flag_death == 1)
 	{
 		sem_post(philo->info->forks);
@@ -13,7 +14,6 @@ void eat_even_philo(t_philo	*philo)
 	printf("%ld %s has taken a left fork\n", get_time_in_millisec(), philo->philo_num_char);
 	sem_post(philo->info->print);
 
-	sem_wait(philo->info->forks);
 	if (philo->info->flag_death == 1)
 	{
 		sem_post(philo->info->forks);
